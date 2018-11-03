@@ -1,0 +1,9 @@
+C:\GitHub\Listiclizer\Listiclization\bin\Debug\netstandard2.0\Listiclization.deps.json
+C:\GitHub\Listiclizer\Listiclization\bin\Debug\netstandard2.0\Listiclization.dll
+C:\GitHub\Listiclizer\Listiclization\bin\Debug\netstandard2.0\Listiclization.pdb
+C:\GitHub\Listiclizer\Listiclization\obj\Debug\netstandard2.0\Listiclization.csprojResolveAssemblyReference.cache
+C:\GitHub\Listiclizer\Listiclization\obj\Debug\netstandard2.0\Listiclization.csproj.CoreCompileInputs.cache
+C:\GitHub\Listiclizer\Listiclization\obj\Debug\netstandard2.0\Listiclization.AssemblyInfoInputs.cache
+C:\GitHub\Listiclizer\Listiclization\obj\Debug\netstandard2.0\Listiclization.AssemblyInfo.cs
+C:\GitHub\Listiclizer\Listiclization\obj\Debug\netstandard2.0\Listiclization.dll
+C:\GitHub\Listiclizer\Listiclization\obj\Debug\netstandard2.0\Listiclization.pdb
