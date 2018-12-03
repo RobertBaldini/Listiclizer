@@ -120,7 +120,7 @@ namespace Listiclization.Tests
         }
 
         [TestMethod]
-        public void Should_handle_reference_types_like_strings_without_any_problems()
+        public void Should_split_list_of_strings_into_two_lists_each_beginning_with_A()
         {
             // Arrange
             var stringInput = new[] { "A", "B", "C", "D", "A", "B", "C" }.ToList();
@@ -141,24 +141,28 @@ namespace Listiclization.Tests
             // Arrange
             var stringInputs = new[]
             {
-                "Alpha lorem  ",
-                "Bravo ipsum  ",
-                "Charlie dolor",
-                "Delta sit    ",
-                "             ",
-                "Alpha lorem  ",
-                "Bravo ipsum  ",
-                "Charlie dolor"
+                "System Log 111   ",
+                "--------------   ",
+                "Alpha lorem      ",
+                "Bravo ipsum      ",
+                "Charlie dolor    ",
+                "Delta sit        ",
+                "                 ",
+                "System Log 112   ",
+                "--------------   ",
+                "Alpha lorem      ",
+                "Bravo ipsum      ",
+                "Charlie dolor    "
             }.ToList();
 
             // Act
-            var listsOfStrings = Listiclizer.SplitIntoListicles(stringInputs, s => s.StartsWith("Alpha"));
+            var listsOfStrings = Listiclizer.SplitIntoListicles(stringInputs, s => s.StartsWith("System Log"));
 
             // Assert
             listsOfStrings.Should().HaveCount(2);
 
-            listsOfStrings[0].Should().ContainInOrder(stringInputs.Take(5));
-            listsOfStrings[1].Should().ContainInOrder(stringInputs.Skip(5).Take(3));
+            listsOfStrings[0].Should().ContainInOrder(stringInputs.Take(7));
+            listsOfStrings[1].Should().ContainInOrder(stringInputs.Skip(7).Take(5));
         }
 
         [TestMethod]
@@ -193,7 +197,7 @@ namespace Listiclization.Tests
         }
 
         [TestMethod]
-        public void Should_also_split_objects_along_properties_matching_a_given_criteria()
+        public void Should_also_split_groups_of_objects_into_subgroups_each_beginning_with_a_given_property_criteria()
         {
             // Arrange
             var logReadout = new[]
