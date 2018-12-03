@@ -202,16 +202,16 @@ namespace Listiclization.Tests
             // Arrange
             var logReadout = new[]
             {
-                new { LogTypeId = 1 },
-                new { LogTypeId = 2 },
-                new { LogTypeId = 3 },
-                new { LogTypeId = 4 },
-                new { LogTypeId = 1 },
-                new { LogTypeId = 2 }
+                new { LogTypeId = 1, IsFaulted = true },
+                new { LogTypeId = 2, IsFaulted = false },
+                new { LogTypeId = 3, IsFaulted = false },
+                new { LogTypeId = 4, IsFaulted = false },
+                new { LogTypeId = 1, IsFaulted = true },
+                new { LogTypeId = 2, IsFaulted = false }
             }.ToList();
             
             // Act
-            var splitLogs = Listiclizer.SplitIntoListicles(logReadout, log => log.LogTypeId == 1);
+            var splitLogs = Listiclizer.SplitIntoListicles(logReadout, log => log.IsFaulted);
 
             // Assert
             splitLogs.Should().HaveCount(2);
