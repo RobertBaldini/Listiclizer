@@ -6,7 +6,7 @@ Splits lists into listicles (sub-groups), where each list begins with a given cr
 For a simple example, notice that the original sort order is preserved.
 
 ```
-var intInputs = new [] { 1, 2, 3, 0, 1, 2, 3, 4 };
+var intInputs = new [] { 1, 2, 3, 0, 1, 2, 3, 4 }.ToList();
 var listOfLists = Listiclizer.SplitIntoListicles(intInputs, num => num == 1);
 
 // listOfLists.Should().HaveCount(2);
