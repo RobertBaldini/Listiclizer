@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>Listiclizer</PackageId>
+    <Authors>Robert Baldini</Authors>
+    <Product>Listiclizer</Product>
+    <Description>A simple utility for splitting lists into listicles (sub-groups), where each list begins with a given criteria</Description>
+    <Copyright>MIT</Copyright>
+    <PackageLicenseUrl>https://github.com/RobertBaldini/Listiclizer/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/RobertBaldini/Listiclizer/</RepositoryUrl>
+    <PackageTags></PackageTags>
+    <Company />
   </PropertyGroup>
 
 </Project>
